@@ -1,0 +1,17 @@
+### ARRAYS
+
+É uma estrutura do JS para se trabalhar com todo tipo de lista
+Seus elementos são identificados por um índice inteiro começando pelo 0
+Pode armazenar qualquer tipo de dado e ter qualquer tamanho
+
+Pode ser criado e utilizado através de colchetes []
+    - let array = []
+    array[0] = "Olá"
+    array[1] = 42
+
+Possuem funções para vários casos de uso
+    - enfileirar e desenfileirar
+    - empilhar e desempilhar
+    - achar o ídice de um valor
+    - cortar e concatenar
+    - etc
