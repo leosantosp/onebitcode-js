@@ -1,42 +1,34 @@
-let patients = ['Leonardo', 'Eliane', 'José', 'Lucas', 'Yasmin'];
-let listPatients = "";
-for(indice = 0; indice < patients.length; indice++){
-    patient = patients[indice];
-    listPatients += "O "+indice+"° da fila é o "+patient+"\n"
-}
+let row = [];
+let option = ""
 
-const option = parseFloat(prompt("Seja bem-vindo(a) ao Consultório Médico\n"+
-"Estes são os pacientes que estão aguardando atendimento\n"+
-listPatients + "\n" +
-"Escolha uma das opções\n 1 -> Novo paciente \n 2 -> Consultar paciente \n 3 -> Sair"));
+do {
+    let patients = ""
+    for(let i = 0; i < row.length; i++) {
+        patients += (i + 1) + "° - " + row[i] + "\n"
+    }
 
-switch(option){
-    case 1:
-        let newPatient = prompt("Insira o nome do paciente");
-        patients.push(newPatient);
+    option = prompt("Seja bem-vindo(a) ao Consultório Virtual\n"+
+    "Pacientes:\n " + patients +
+    "\nEscolha uma opção:\n 1. Novo paciente\n 2. Consultar paciente\n 3. Sair")
 
-        option = parseFloat(prompt("Seja bem-vindo(a) ao Consultório Médico\n"+
-                                        "Estes são os pacientes que estão aguardando atendimento\n"+
-                                        listPatients + "\n" +
-                                        "Escolha uma das opções\n 1 -> Novo paciente \n 2 -> Consultar paciente \n 3 -> Sair"));
-        break;
+    switch(option){
+        case "1":
+            const newPatient = prompt("Digite o nome do paciente");
+            row.push(newPatient);
+            break;
+        
+        case "2":
+            const consultPatient = row.shift();
+            alert("Consultando o paciente " + consultPatient);
+            alert("Paciente " + consultPatient + " saindo do consultório");
+            break;
 
-    case 2:
-        let consultPatient = patients.shift();
-        alert("Consultando o paciente "+consultPatient);
-        alert(consultPatient + " deixando o consultório");
+        case "3":
+            alert("Encerrando...");
+            break;
 
-        option = parseFloat(prompt("Seja bem-vindo(a) ao Consultório Médico\n"+
-                                        "Estes são os pacientes que estão aguardando atendimento\n"+
-                                        listPatients + "\n" +
-                                        "Escolha uma das opções\n 1 -> Novo paciente \n 2 -> Consultar paciente \n 3 -> Sair"));
-
-        break;
-
-    case 3:
-        alert("Encerrando o sistema...")
-        break;
-
-    default :
-        alert("Esta opção não é válida");
-}
+        default:
+            alert("A opção digitada não é válida");
+            break;
+    }
+} while (option !== "3");
