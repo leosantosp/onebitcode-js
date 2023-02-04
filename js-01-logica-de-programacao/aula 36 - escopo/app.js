@@ -28,3 +28,5 @@ console.log(animal) // O erro exibido será 'animal' is not defined
 /* O motivo pelo qual o 'var' deixou de ser utilizado para declarar variáveis
 É que ela ignora esta regra, ela pode ser chamada fora do escopo interno */
 
+//--------------------------------
+
