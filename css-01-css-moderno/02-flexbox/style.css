@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Modo como as box do nosso site são renderizados*/
+}
+
+.container {
+    background: darkgray;
+    min-height: 100vh; /* View-port Height */
+    display: flex; /* Como os itens serão alinhados */
+    flex-direction: row; /* Alinha os itens em row | column | row-reverse | column-reverse */
+    
+    /* GAP é o espaçamentos entre os nossos itens 
+        row-gap -> Se o flex-direction for column / utilize row-gap
+        column-gap -> Se o flex-direction for row / utilize column-gap
+        gap -> Se informado apenas um valor, considera para row e column
+               Se informado dois valores, considera 1 -> row e 2 -> column
+    */
+    gap: 0 15px;
+
+
+    /*
+        JUSTIFY-CONTENT -> Alinhamento HORIZONTAL do flex-container
+        Seu alinhamento varia conforme o flex-direction;
+        Flex-direction: column -> Alinhamento será vertical
+        Flex-direction: row -> Alinhamento será horizontal
+    */
+    justify-content: center; /* 
+        flex-start -> Alinha ao início
+        center -> Alinha ao centro
+        flex-end -> Alinha ao final
+        space-around -> Deixa um espaçamento entre os itens e também adiciona espaçamentos por fora
+        space-between -> Deixa um espaçamento igualitário entre os itens desconsiderando o espaço externo
+        space-evenly -> Deixa um espaçamento igualitário entre os itens e os espaçamentos externos
+    */
+
+
+    /*
+        ALIGN-ITEMS -> Alinhamento VERTICAL do flex-container
+    */
+    align-items: center; /*
+        Possui os mesmos valores que o 'justify-content'. A diferença é que ele também possui o
+        stretch -> traduzindo em 'esticar', para ele funcionar, é necessário que uma altura/largura não esteja definida.
+        Assim, o elemento irá se esticar até o fim do da div.
+
+        Para esticar em altura, o flex-direction precisa estar como 'row'
+        Para esticar em largura, o flex-direction precisa estar como 'column'
+    */
+
+
+    /* FLEX-WRAP -> A quebra dos elementos 
+        nowrap -> Não quebrar quando chegar ao limite, eles vão se comprimindo dentro da div
+        wrap -> quebre os elementos conforme chegar aos limites
+        wrap-reverse -> quebre os elementos e inverta suas ordens
+    */
+    flex-wrap: wrap;
+
+
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #2B2B2B;
+    background-color: #FFF;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
