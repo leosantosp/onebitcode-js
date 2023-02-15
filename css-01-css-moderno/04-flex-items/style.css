@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: darkgray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    gap: 0 15px;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+
+}
+
+.item {
+    /* width: 200px; */
+    height: 200px;
+    border: 2px solid #2B2B2B;
+    background-color: #FFF;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 200px; /* Largura base do nosso item, para o flex-basis funcionar, um
+    width não pode ter sido determinado */
+    
+    /* FLEX-GROW faz com que o elemento cresça no HTML sem que ele quebre de imediato */
+    flex-grow: 1; /* O flex-grow só quebra no momento em que ele não consegue comprimir o elemento
+    mais do que os px's definidos no flex-basis. O valor 1 define que ao quebrar ele vai preencher
+    toda a largura da tela. Apenas 0 e 1 que vale */
+
+}
+
+.item1 {
+    /* FLEX-SHRINK está ligado diretamente a diminuição dos nossos itens */
+    flex-shrink: 2; /* Significa que o item vai diminuir 2x mais do que os outros. 
+    Flex-wrap ativado no pai, não concede o efeito shrink no filho */    
+
+    /* ORDER define a ordem que o elemento será apresentado dentro do bloco */
+    order: 2;
+    
+    /* ALIGN-SELF como o nome define, é um alinhamento próprio.
+    É quase como se o align-items fosse aplicado individualmente.
+    A direção varia dependendo do flex-direction */
+    align-self: flex-start;
+}
+
+.item2 {
+    order: 3;
+    /* SHORTCUT DE FLEX */
+    /* flex: grow | shrink | basis */
+    flex: 0 0 200px;
+    
+}
+
+.item3 {
+    order: 1;
+}
