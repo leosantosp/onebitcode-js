@@ -13,7 +13,8 @@
     /* Definir as colunas do template, utilizamos 'grid-template-columns' */
     /* Sempre utilizar % ou frames (fr), que é como se fosse 100% dividido: 1fr 2fr 1fr (25% 50% 25%) */
     /* Também podemos utilizar a função repeat(quantas vezes, valor a ser repetido) */
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     
     /*O GAP funciona da mesma forma que o gap do FLEXBOX, então, 
     quanto de espaçamento haverá entre um elemento e outro? 
@@ -33,7 +34,7 @@
     /* GRID AUTO ROWS -> As linhas ficam com 210px. Dito isto, haverá um momento
     em que o layout vai se quebrar, pra isso podemos utilizar uma função chamada
     minmax(), nela informamos um valor mínimo e um valor máximo  */
-    grid-auto-rows: minmax(210px, 240px);
+    grid-auto-rows: minmax(310px, auto);
 
 
 

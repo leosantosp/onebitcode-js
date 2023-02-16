@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Modo como as box do nosso site são renderizados*/
+}
+
+.container {
+    background: darkgray;
+    min-height: 100vh;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 15px;
+    grid-auto-rows: minmax(110px, auto);
+
+    /* GRID-TEMPLATE-AREAS -> Uma forma mais visual de definir como os templates
+    vão se comportar, sem utilização do grid-column ou grid-row. Nele, definimos
+    como ficará o nosso template.
+    
+    
+    grid-template-areas: 
+    "item1 item1 item1"
+    "item2 item2 item3"
+    "item2 item2 item4"
+    "item5 item5 item5"
+    "item5 item5 item5"
+    "item6 item7 item7"
+    "item8 item7 item7";
+
+    Depois basta ir no item que ficará denominado com o nome e atribuí-lo 
+    utilizando o grid-area. Exemplo:
+
+    .item1 {
+        grid-area: item1;
+    }
+
+    */
+}
+
+.item {
+    border: 2px solid #2B2B2B;
+    background-color: #FFF;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.item1 {
+    /* GRID COLUMN -> define a coluna e o tamanho dela.
+    Imaginamos que a tela é dividida em linhas, e os dois cantos da tela também 
+    contabilizam como linhas. Numa situação de 1fr 1fr 1fr, contando com os cantos
+    eles somam em 4 linhas. Logo um item 1/4 toma conta de toda a tela.
+    LEMBRANDO: As linhas em grid-columns são na vertical da tela
+    
+    O GRID-COLUMN ele se baseia a partir do valor definido em grid-template-column
+    */
+    grid-column: 1/4;
+}
+
+.item2 {
+    grid-column: 1/3;
+    /* GRID ROW -> define a linha e o tamanho dela. 
+    Imaginamos a tela dividida em linhas, desta vez na horizontal. Os cantos da tela
+    superior e inferior também contabilizam como linhas. */
+    grid-row: 2/4;
+}
+
+.item5 {
+    grid-column: 1/4;
+    grid-row: 4/6;
+}
+
+.item6 {
+    grid-column: 1/3;
+}
+
+.item7 {
+    grid-column: 3/4;
+    grid-row: 6/8;
+}
+.item8 {
+    grid-column: 1/3;
+}
+
+.item9 {
+    grid-column: 1/4;
+}
