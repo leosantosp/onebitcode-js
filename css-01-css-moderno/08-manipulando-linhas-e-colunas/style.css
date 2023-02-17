@@ -12,7 +12,8 @@
     gap: 10px 15px;
     grid-auto-rows: minmax(110px, auto);
 
-    /* GRID-TEMPLATE-AREAS -> Uma forma mais visual de definir como os templates
+    /* 
+    GRID-TEMPLATE-AREAS -> Uma forma mais visual de definir como os templates
     vão se comportar, sem utilização do grid-column ou grid-row. Nele, definimos
     como ficará o nosso template.
     

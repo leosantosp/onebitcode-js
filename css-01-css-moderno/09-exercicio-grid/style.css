@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Modo como as box do nosso site são renderizados*/
+}
+
+body {
+    background-color: #CCCC;
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 8px;
+    grid-auto-rows: minmax(110px, auto);
+}
+
+.item {
+    background-color: #FFFf;
+    border: 2px solid #2B2B2B;
+    font-size: 30px;
+}
+
+
+.item1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.item5 {
+    grid-column: 1/4;
+}
+
+.item6 {
+    grid-column: 1/3;
+}
+
+.item8 {
+    grid-column: 1/4;
+}
