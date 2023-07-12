@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Exercício 12 - Cadastro de DEVs</h1>
+    <hr>
+
+    <h2>Cadastrar Novo Desenvolvedor</h2>
+    <form id="devForm">
+        <!-- Inicialmente tivessemos um input para nome completo do dev -->
+        <label for="fullname">Nome completo</label>
+        <input type="text" name="fullname" id="fullname"> <br><br>
+        <label>Tecnologias</label><br>
+        <!-- Pelo botão dentro do form não ser do tipo submit, eu preciso
+        identificá-lo como tipo button, caso contrário, o formulário ficará sendo
+        enviado todas as vezes-->
+        <button id="addTechBtn" type="button">Adicionar nova</button>
+        <!-- Neste campo será mostrado os novos inputs para inserir nomee 
+        da tecnologia e o tempo de experiência na tecnologia -->
+        <ul id="stackInputs"></ul>
+        <br>
+        <button type="submit" >Cadastrar</button>
+    </form>
+</body>
+</html>
