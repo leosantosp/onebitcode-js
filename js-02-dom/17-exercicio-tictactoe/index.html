@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="black">
+    <h1 class="">TIC-TAC-TOE</h1>
+    <button id="btnSwitchTheme">
+        Dark/Light Mode
+    </button>
+    <br><br>
+
+    <form id="formGame">
+        <input type="text" name="player1" id="player1" placeholder="Player 01">
+        <input type="text" name="player1" id="player2" placeholder="Player 02">
+        <button type="submit" id="startGame" class="startGame">Iniciar jogo</button>
+    </form>
+
+    <hr>
+    <h3>É A VEZ DE: <span id="turn">FULANO</span></h3>
+
+    <section id="tabuleiro">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
