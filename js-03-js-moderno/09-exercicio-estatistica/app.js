@@ -40,7 +40,15 @@
     //------------------------------
     */
    
-    
+    const weightedAverage = (...numbers) => {
+        let sumWeight = numbers.reduce((accum, num) => accum + num.p, 0);
+        let sumWeighted = numbers.reduce((accum, num) => accum + num.n * num.p, 0);
+
+        return sumWeighted / sumWeight;
+        
+    }
+
+    console.log(weightedAverage({n: 7, p: 2}, {n: 9, p: 5}, {n: 3, p: 1}))
    
    
    
@@ -59,6 +67,30 @@
         mediana(15, 14, 8, 7, 3) === 8
         // porque 8 está no centro da sequência
 
+**/ 
+
+    const median = (...numbers) => {
+        const center = Math.floor(numbers.length / 2);
+        let result
+
+        if(numbers.length % 2 === 1){
+            result = "Quantidade Impar: " + numbers[center];
+        } else {
+            let leftValue = numbers[center - 1];
+            let rightValue = numbers[center];
+            result = "Quantidade Par: " + (leftValue + rightValue) / 2;
+        }
+
+        return result;
+
+
+    }
+
+    console.log(median(2, 4, 5, 7, 42, 99));
+    console.log(median(15, 14, 8, 7, 3));
+
+
+/*
     //---------------------------------------
 
     - Moda -> - Pode ser calculada encontrando o valor que mais se repete em um dado conjunto.
