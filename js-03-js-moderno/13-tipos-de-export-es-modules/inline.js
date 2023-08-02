@@ -3,7 +3,7 @@ export function inline(){
     console.log('Export nomeado inline');
 }
 
-// export default -> 
-export default function defaultInline(){
+// export default -> é padrão e pode ser uma função anônima
+export default function (){
     console.log('Export default inline');
 }
